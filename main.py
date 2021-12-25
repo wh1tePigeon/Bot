@@ -1,10 +1,11 @@
 import telebot 
-#import os
+import os
 from glob import glob
 from random import choice
 from PIL import Image
 from telebot import types
-bot = telebot.TeleBot('5005174315:AAF7IsBj-kySwgLQYatTpahsoarJf0nw7mc')
+k = os.getenv("KEY")
+bot = telebot.TeleBot(k)
 
 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 item1 = types.KeyboardButton("Press to die from cringe")
