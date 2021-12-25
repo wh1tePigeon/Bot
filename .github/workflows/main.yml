@@ -1,4 +1,4 @@
-name: BotLint
+name: Bot
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  build:
-
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         find . -name '*.py' -exec pylint {} \;
+
